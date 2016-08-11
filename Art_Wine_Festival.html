@@ -527,8 +527,9 @@ header {
                 |__________|__________|_________|
 
         */
-        // To be discussed with Joe about regional artisans
-        // if(selected === "Patricia Thrap" || selected === "Polly Toombs" || selected === "Marlene Olson")
+        if(selected === "Patricia Thrap" || selected === "Polly Toombs" || selected === "Marlene Olson" || selected === "Heather Richman" || selected === "Mary Rhodes" || selected === "Cesar Cobos"){
+            locateMarkers(map, "Patricia Thrap", "Polly Toombs", "Marlene Olson", "Heather Richman", "Mary Rhodes", "Cesar Cobos")
+        }
         if(selected === "Ian Ely" || selected === "Paul Nzalamba"){
             locateMarkers(map, "Ian Ely", "Paul Nzalamba", "", "");
         }
@@ -563,13 +564,13 @@ header {
        var locations = [
         ['Tracy Harris', 37.049775, -122.031600],
         ['Heather Deming', 37.050100, -122.031490],
-        ['Teri McAlister Trujillo', 37., -122.],
+        ['Teri McAlister Trujillo', 37., -122.], // Maybe removed/canceled - update the arrays
         ['Suzanne McLean', 37.050065, -122.031640],
         ['June Lantz', 37.049775, -122.031600],
-        ['Mary Rhodes', 37., -122.],
+        ['Mary Rhodes', 37.050010, -122.031810],
         ['Kristi Flynn', 37.050260, -122.031800],
         ['James Lassak', 37.050260, -122.031800],
-        ['Patricia Tharp', 37., -122.],
+        ['Patricia Tharp', 37.050010, -122.031810],
         ['Pam Wood', 37.049710, -122.031270],
         ['Ian Ely', 37.049895, -122.031710],
         ['Lisa Haley', 37.049710, -122.031270],
@@ -577,7 +578,7 @@ header {
         ['Jim Rajner', 37.049710, -122.031270],
         ['Eileen Murray', 37.049830, -122.031390],
         ['Nancy Wade', 37.050195, -122.031730],
-        ['Jay Topping', 37., -122.],
+        ['Jay Topping', 37., -122.], // Special?
         ['Frank Vigneri', 37.050190, -122.031990],
         ['Lisa Grant', 37.049880, -122.031260],
         ['Brian & Heather Gleser', 37.049830, -122.031390],
@@ -597,7 +598,7 @@ header {
         ['Kelsey Fransen', 37.050420, -122.031680],
         ['Gila Sagy', 37.049850, -122.031020],
         ['Cynthia Starkey', 37.049850, -122.031020],
-        ['Nancy Allen', 37., -122.],
+        ['Nancy Allen', 37., -122.], // Maybe removed/canceled --- update the arrays
         ['Lura Koos', 37.049830, -122.031390],
         ['John Shipp', 37.050065, -122.031640],
         ['Alisan Andrews', 37.050195, -122.031730],
@@ -624,14 +625,14 @@ header {
         ['Jason & Jeanne Dayne', 37.049710, -122.031270],
         ['Cheryl Costella', 37.050220, -122.031610],
         ['Cristy Aloysi', 37.050365, -122.031550],
-        ['Polly Toombs', 37., -122.],
+        ['Polly Toombs', 37.050010, -122.031810],
         ['Jeanne Rousseau', 37.050410, -122.031770],
         ['Megan DeHerrera', 37.050410, -122.031770],
         ['Rhea Dennis', 37.050270, -122.031490],
         ['Ellen McErlane', 37.050420, -122.031680],
         ['Brooke Glineur', 37.049675, -122.031780],
         ['Isabel Wilson', 37.050065, -122.031640],
-        ['Heather Richman', 37., -122.],
+        ['Heather Richman', 37.050010, -122.031810],
         ['Terry McCormac', 37.050365, -122.031550],
         ['Kim Williams', 37.049880, -122.031260],
         ['Mary Kay Wilkinson', 37.050050, -122.031280],
@@ -659,7 +660,8 @@ header {
         ['Stephanie Shumway', 37.050050, -122.031280],
         ['Lisa Tarris', 37.049950, -122.031150],
         ['Napoleon Paz' , 37.049880, -122.031260],
-        ['Leah Way', 37.049945, -122.031930]
+        ['Leah Way', 37.049945, -122.031930],
+        ['Cesar Cobos' , 37.050010, -122.031810]
         ];
         
          var icon = {
@@ -730,7 +732,7 @@ header {
       }
 
     </script> 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5AL1iHSrOzZz64_4FijXgUTDSp9-hpNY%20&callback=initMap">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
     </script>
 </body>
 </html>
