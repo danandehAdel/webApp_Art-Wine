@@ -25,7 +25,22 @@
   padding: 5px;
   box-shadow: inset 0 0 5px rgba(000,000,000, 0.5);
  }
- 
+.demo styled-select hover{
+    background-color: darkgreen;
+ }
+
+ .color {
+    background-color:#0F0;
+ }s
+
+ select.dropdown {
+    color: red;
+ }
+
+ select.dropdown option {
+    color: red;
+    background-color: green;
+ }
  .styled-select select {
     background: #fff;
     color:#000;
@@ -42,59 +57,15 @@
     background-color: 4cec3c;
  }  
    
- .demo select.balck {
-  background-color: e6ffff;
- }
-    
+ .demo select.categ {
+  background-color: #17b217;
+ }  
     .nav-wrapper{
         height: 60%;
         width: 100%;
         background: #1d8b19;
 
     }
-   .button {
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    padding: 1px 12px;
-    border: 2px solid #8f3434;
-    border-radius: 9px;
-    background: #f58c1b;
-    background: -webkit-gradient(linear, left top, left bottom, from(#f58c1b), to(#000000));
-    background: -moz-linear-gradient(top, #f58c1b, #000000);
-    background: linear-gradient(to bottom, #f58c1b, #000000);
-    text-shadow: #000000 1px -2px 1px;
-    font: normal normal bold 39px arial;
-    color: #ffffff;
-    text-decoration: none;
-}
-.button:hover,
-.button:focus {
-    border: 2px solid #e55353;
-    color: #ffffff;
-    text-decoration: none;
-}
-.button:active {
-    background: #999999;
-    background: -webkit-gradient(linear, left top, left bottom, from(#999999), to(#000000));
-    background: -moz-linear-gradient(top, #999999, #000000);
-    background: linear-gradient(to bottom, #999999, #000000);
-}
-.button:before{
-    content:  "\0000a0";
-    display: inline-block;
-    height: 24px;
-    width: 24px;
-    line-height: 24px;
-    margin: 0 4px -6px -4px;
-    position: relative;
-    top: 0px;
-    left: 0px;
-    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAEnklEQVRIie2Vy2tdVRTGf+dx36c39+adNjfPtqZNWqOxRbDWKkUzEhQdOFKLMwfqzEoHEVQQQdCJw4ITBx2IFLSoYEt9FLGh9GmbR5vkJmmS3jQ3uTn3PPbDQfNoXugf4ILFhrXP2t9Z37fW3vC//YsZW20c/Thja2k1VjnJ/bVVVa+ZRqxLa7MNwDDUsNL+1elC4ZtCyb1s2jL/0wdz4j8DvNqHKdKNb3Tlml9vrd15sLulK551KklEEgB4YZnZ0iyX7lwNbk8PXrg2duekNT/+9ak+1PqzrPWBpz9JxQOdffvFA90fvfDokY7O3C7bssZxw4sUvfMs+P0IPUkqFmF3fafVVtfQHLWDQ/1j88HOI4v9Q2eRW1bwXF/WqdwWO/7M/vZ3j+57IumJcea9fgI5hUatK9ckatWSjvcQt3fw8+W/3F+uDH4+u+B9eravWFr+yn44JRnj8J5c7Fh3S02ysHiRxeAmQpUAvQmRkkDcxQvPkYp20N1ak5yeG3urf8D/DTiz+hsPWcKW77Q3JOqFnqLgXsUNFgiEZnLcIBBs4ho3WKDgXkHoKdoakvWJqHpvUw2eOp7pfiRnfLa3NUbJn8AXiwilEQq+er+d0SGFFRfEtym0CUKxsh9KgS9KOIkIhaLXHu2Mfzd63ru7hiJLyN6GaotyWCYQiyitlzjXbK9vp3C7jh+GpmneN0HHgTI72iSWzQp9obFI1I7SUA3WddkLXFqvQY/jCNzAI5RrGgGlFKlUirhsIn8lw/DlSeraZzj8sk8qs6yPRCgPxxEojJ4NIhtKVWtD4gYgpV7TX74fIJfGKBZNEqOdmZv1nDwxzuO9c3QddokmFKEM0IbAUFb1BgCtdOB6GttSyHVNE4QBMlwbS2cT9BzupqJpEqGuoUMf09BIpdFKBxsBhMrPlwwcx0SsQwiDACkelBSNmeztqabjYAKdvoFv5PFFgAg1tmVQKhloofKbUCRPT07ax5pbI4QyROnVq0UhSVfGadmbZP+zMfzIINOlAWR5tSzTsNE6wsSkRCG+3QAQGsbZezNyurbeqrWjKXxRXEk++Hwt1W0eVmacEXeIUJbBWBJJazAMEpEUbtmgMCOnlTJ+Xc5dmYP8n9LL9VAVS0QOZSuq8YRHKAVSapyGMgsMcL88QShCpGLVtYFpJEhGapmaLHHvrvfFuS/F9xsAAHL7rAHf13uSjtOSTTeYQig8GVDy5x7wvDRYD9xAa5u4XUUm2cz9gi9GBotn3Hn14chFVdwUoLVNLfjKHC67ojOTqcxl09uJ2g5SgdLGgw7RFpaZIB7JUplqpiLRyEIx5Na1id+LheBEOBfeyF9fvbw2vAeHXsFUjrW7pr7iZHNb7slcrolIJEIofULpARCx4kSsGGEYMjY2ysjw2IWZ6eKbekHe+uPU2jdhPYANxIH0thqamh7jparGRG/rrsbGTLYimUw5UTS4bimYu190bw/k84Wx8o8j/ZwuFRgF5gAXCLYCMIEkkAYqgaRTSWVDh9ER36br7BhpAOEx77nGzPgN/bdbWDl0Figt+ZYAyyDmUjXmQ7HNTD20iqV1DUX/AC71V1VoEe2NAAAAAElFTkSuQmCC") no-repeat left center transparent;
-    background-size: 100% 100%;
-}
-
-
 
 .button2 {
     display: inline-block;
@@ -144,10 +115,10 @@
     
     ul {
       list-style-type: none;
-      margin: 10;
+      margin: 0;
       padding: 2%;
       overflow: hidden;
-      background-color: #1d8b19;
+      background-color: #157D0C;
     }
 
     li {
@@ -177,7 +148,7 @@
     background: -moz-linear-gradient(top, #f58c1b, #262626);
     background: linear-gradient(to bottom, #f58c1b, #262626);
     text-shadow: #591717 0px 0px 0px;
-    font: normal normal bold 39px arial;
+    font: normal normal bold 28px arial;
     color: #ffffff;
     text-decoration: none;
 }
@@ -217,109 +188,124 @@ header {
     text-align: center;
 }
 
-
+.button {
+    background-color: #fff;
+    border: none;
+    color: black;
+    left: 70%;
+    padding: 12px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 6px;
+    cursor: pointer;
+    font: normal normal bold 20px arial;
+}
 </style>
 </head>
-<header>
+<header> <h1>Welcome to Art & Wine Festival </h1>
 <p><img src="https://s31.postimg.org/jsd0n6wsb/Selection_001.png" alt="Warning!"> </p>
 </header>
 <body>
   <ul class="right hide-on-med-and-down">
-     <h1>Welcome to Art & Wine Festival <button1 class="button1" onclick="foodMap()" style="float: right;"> 
-                Food's Map
-    </button1></h1>
-     <button1 class="button1" onclick="redirectButton()" style="float: right;"> 
-                Home
-    </button1>
-
+     
+<div>
+<button class="button" onclick="redirectButton()" style="float: left;"> Home </button>
+<button class="button" onclick="foodMap()" style="float: left;"> Food's Map</button>
+<button class="button" onclick="initMap()" style="float: left;">3D Map</button>
+</div></ul>
+<ul class="right hide-on-med-and-down">   
+<br></br>
   <nav>
     <div class="nav-wrapper">
     <div class="styled-select">
-        <select class="balck" id="category" onchange="ChangeArtistList()">
-            <option value="">
+        <select class="categ" id="category" onchange="ChangeArtistList()" onSelect="do()">
+            <option calss="color" value="">
                 -- Categories --
             </option>
-            <option value="bags">
+            <option calss="color" value="bags">
                 Bags
             </option>
-            <option value="bathBody">
+            <option calss="color" value="bathBody">
                 Bath & Body
             </option>
-            <option value="candles">
+            <option calss="color" value="candles">
                 Candles
             </option>
-            <option value="ceramics">
+            <option calss="color" value="ceramics">
                 Ceramics
             </option>
-            <option value="clothing">
+            <option calss="color" value="clothing">
                 Clothing
             </option>
-            <option value="crafts">
+            <option calss="color" value="crafts">
                 Crafts
             </option>
-            <option value="drawing">
+            <option calss="color" value="drawing">
                 Drawing
             </option>
-            <option value="fiber">
+            <option calss="color" value="fiber">
                 Fiber
             </option>
-            <option value="furniture">
+            <option calss="color" value="furniture">
                 Furniture
             </option>
-            <option value="glass">
+            <option calss="color" value="glass">
                 Glass
             </option>
-            <option value="hair accessories">
+            <option calss="color" value="hair accessories">
                 Hair accessories
             </option>
-            <option value="jewelry">
+            <option calss="color" value="jewelry">
                 Jewelry
             </option>
-            <option value="knit and amp, Crochet">
+            <option calss="color" value="knit and amp, Crochet">
                 Knit and amp, Crochet
             </option>
-            <option value="leather">
+            <option calss="color" value="leather">
                 Leather
             </option>
-            <option value="metalworking">
+            <option calss="color" value="metalworking">
                 Metalworking
             </option>
-            <option value="mixed media">
+            <option calss="color" value="mixed media">
                 Mixed Media
             </option>
-            <option value="painting">
+            <option calss="color" value="painting">
                 Painting
             </option>
-            <option value="paper crafts">
+            <option calss="color" calss="color" value="paper crafts">
                 Paper Crafts
             </option>
-            <option value="pet accessories">
+            <option calss="color" value="pet accessories">
                 Pet Accessories
             </option>
-            <option value="photography">
+            <option calss="color" value="photography">
                 Photography
             </option>
-            <option value="printmaking">
+            <option calss="color" value="printmaking">
                 Printmaking
             </option>
-            <option value="sauces and amp, jams">
+            <option calss="color" value="sauces and amp, jams">
                 Sauces and Amp; Jams
             </option>
-            <option value="sculpture">
+            <option calss="color" value="sculpture">
                 Sculpture
             </option>
-            <option value="stoneworking">
+            <option calss="color" value="stoneworking">
                 Stoneworking
             </option>
-            <option value="woodworking">
+            <option calss="color" value="woodworking">
                 Woodworking
             </option>
-            <option value="other categories">
+            <option calss="color" value="other categories">
                 Other Categories
             </option>
-        </select> <select class="balck" id="artist" onchange="goButton()"> <!-- added onchange="goButton() to submit info without the Go button -->
+        </select> <select class="categ" id="artist" onchange="goButton()"> <!-- added onchange="goButton() to submit info without the Go button -->
             </select> 
-           <!-- <button class="button" onclick="goButton()" style="float: center;">Go</button> --> <!-- remved the Go button -->
+           <button class="button" id="Asite" onclick="artist_Site()" style="visibility:hidden" style="float: center;">Artist's site</button>
+           <!-- remved the Go button -->
             
     </div>
       </ul>
@@ -327,9 +313,9 @@ header {
   </nav>
    
     <div id="map"></div>
-    <br>
+    <!--<br>
     <button2 class="button2" onclick="initMap()" style="float: center;">3D Map</button2>
-    </br>
+    </br>-->
     <script>
     var historicalOverlay;
 
@@ -371,20 +357,30 @@ header {
     
     */
 
+    
+
     function ChangeArtistList() {
 
-        var selec = document.getElementById('category');
-        selec.addEventListener('click', function(el){
-            var options = this.children;
-            // for(var i = 0; i < this.childElementCount; i++){
-            //     options[i].style.color = 'white';
-            // }
+        // First approach: 
+        // var selec = document.getElementById('category');
+        // selec.addEventListener('click', function(el){
+        //     var options = this.children;
+        //     // for(var i = 0; i < this.childElementCount; i++){
+        //     //     options[i].style.color = 'white';
+        //     // }
 
-            var selected = this.children[this.selectedIndex];
-                selected.style.color = 'black';
-                // options.style.background = 'red';
-                selected.style.background = 'green';
-            }, false);
+        //     var selected = this.children[this.selectedIndex];
+        //         selected.style.color = 'black';
+        //         // options.style.background = 'red';
+        //         selected.style.background = 'green';
+        //     }, false);
+
+        // Second approach:
+        // var select = document.getElementById('category');
+        //     select.onchange = function(){
+        //     select.className = this.options[this.selectedIndex].className;
+        // }
+        // document.getElementById("Asite").style.visibility="visible";     
 
         var categoryList = document.getElementById("category");
         var artistList = document.getElementById("artist");
@@ -402,6 +398,8 @@ header {
             }
         }
     }
+
+    
     /*
      ______________________________________________________________________________
     |                                                                              |
@@ -452,86 +450,111 @@ header {
             alert("Please select an artist");
             initMap();
         }
-       
+
         // check to see what artist is selected from the drop-down menu then create a marker for 
         // it based on its latitude and longitude of their location on the Google Map
 
         // ------------ Here is the N area on the map ------------------
         
         if(selected === "Shandra Hunt" || selected === "Kelsey Fransen" || selected === "Ellen McErlane"){
+            artist_Site(selected);
             locateMarkers(map, "Ellen McErlane", "Kelsey Fransen", "Shandra Hunt", "");
         }
         if(selected === "Megan DeHerrera" || selected === "Silvana Piga" || selected === "Jeanne Rousseau" || selected === "Alissa Bennett"){
+            artist_Site(selected);
             locateMarkers(map, "Megan DeHerrera", "Silvana Piga", "Jeanne Rousseau", "Alissa Bennett");
         }
         if(selected === "Terry McCormac" || selected === "Will Sandford" || selected === "Cristy Aloysi"){
+            artist_Site(selected);
             locateMarkers(map, "Terry McCormac", "Will Sandford", "Cristy Aloysi", "");
         }
         if(selected === "Stephanie Delaney" || selected === "Rhea Dennis" || selected === "April Zilber"){
+            artist_Site(selected);
             locateMarkers(map, "Stephanie Delaney", "Rhea Dennis", "April Zilber", "");
         }
         if(selected === "Karen Asherah" || selected === "Linda Schauble"){
+            artist_Site(selected);
             locateMarkers(map, "Karen Asherah", "Linda Schauble", "", "");
         }
         if(selected === "James Lassak" || selected === "Kristi Flynn" || selected === "Danielle Velasquez-Echeverria"){
+            artist_Site(selected);
             locateMarkers(map, "Danielle Velasquez-Echeverria", "James Lassak", "Kristi Flynn", "");
         }
         if(selected === "Cheryl Costella" || selected === "Judy Bingman" || selected === "Laurie Tholen" || selected === "Diane Washington"){
+            artist_Site(selected);
             locateMarkers(map, "Cheryl Costella", "Judy Bingman", "Laurie Tholen", "Diane Washington");
         }
         if(selected === "Stephanie Aguilar" || selected === "Jeffrey Nelson" || selected === "Alisan Andrews" || selected === "Nancy Wade"){
+            artist_Site(selected);
             locateMarkers(map, "Stephanie Aguilar", "Jeffrey Nelson", "Alisan Andrews", "Nancy Wade");
         }
         // ------------ Here is the W area on the map ------------------
 
         if(selected === "Lori Lester" || selected === "Shlomo Shuval" || selected === "Jiten Sadhwani" || selected === "Caroline Veira"){
+            artist_Site(selected);
             locateMarkers(map, "Lori Lester", "Shlomo Shuval", "Jiten Sadhwani", "Caroline Veira");
         }
         if(selected === "Linda Mills" || selected === "Frank Vigneri" || selected === "Stephen Toll" || selected === "Helen Youmans"){
+            artist_Site(selected);
             locateMarkers(map, "Linda Mills", "Frank Vigneri", "Stephen Toll", "Helen Youmans");
         }
         if(selected === "Neil Simmons" || selected === "Jeff Lesniak" || selected === "Leanna Simmons"){
+            artist_Site(selected);
             locateMarkers(map, "Neil Simmons", "Jeff Lesniak", "Leanna Simmons");
         }
         if(selected === "Anesa Carosielli" || selected === "Joe Ludlow"){
+            artist_Site(selected);
             locateMarkers(map, "Joe Ludlow", "Anesa Carosielli", "", "");
         }
         if(selected === "Angel Nodal" || selected === "Linda Curtis"){
+            artist_Site(selected);
             locateMarkers(map, "Angel Nodal", "Linda Curtis", "", "");
         }
         // ------------ Here is the E area on the map ------------------
 
         if(selected === "John Andrich" || selected === "Tammy Galvan" || selected === "Linjong Kunsuwanlee"){
+            artist_Site(selected);
             locateMarkers(map, "Linjong Kunsuwanlee", "Tammy Galvan", "John Andrich", "");
         }
         if(selected === "Leanne Hamilton" || selected === "Mary Kay Wilkinson" || selected === "Carol Riddle"){
+            artist_Site(selected);
             locateMarkers(map, "Leanne Hamilton", "Mary Kay Wilkinson", "Carol Riddle", "");
+
         }
         if(selected === "Lisa Tarris" || selected === "Erik Waage" || selected === "Jennifer Lomb" || selected === "Marilyn Bates-Nolan"){
+            artist_Site(selected);
             locateMarkers(map, "Marilyn Bates-Nolan", "Lisa Tarris", "Erik Waage", "Jennifer Lomb");
         }
         if(selected === "Tri Tran" || selected === "Gila Sagy" || selected === "Cynthia Starkey" || selected === "John F. Hunter"){
+            artist_Site(selected);
             locateMarkers(map, "John F. Hunter", "Gila Sagy", "Tri Tran", "Cynthia Starkey");
         }
         if(selected === "Tony Pagliaro" || selected === "Brian Iles" || selected === "Heather Deming"){
+            artist_Site(selected);
             locateMarkers(map, "Tony Pagliaro", "Brian Iles", "Heather Deming", "");
         }
         if(selected === "Napoleon Paz" || selected === "Mary Jessen" || selected === "Lisa Grant" || selected === "Kim Williams"){
+            artist_Site(selected);
             locateMarkers(map, "Napoleon Paz", "Mary Jessen", "Lisa Grant", "Kim Williams");
         }
         if(selected === "Michael Simon Dickey" || selected === "Nancy Haver" || selected === "Danny Quijano"){
+            artist_Site(selected);
             locateMarkers(map, "Danny Quijano", "Nancy Haver", "Michael Simon Dickey", "");
         }
         if(selected === "Suzanne McLean" || selected === "Anna Pavlova" || selected === "John Shipp" || selected === "Isabel Wilson"){
+            artist_Site(selected);
             locateMarkers(map, "Suzanne McLean", "Anna Pavlova", "John Shipp", "Isabel Wilson");
         }
         if(selected === "Wendy Collins" || selected === "Iris Wise" || selected === "Vincent Verret"){
+            artist_Site(selected);
             locateMarkers(map, "Wendy Collins", "Iris Wise", "Vincent Verret", "");
         }
         if(selected === "Eileen Murray" || selected === "Lisa Poston" || selected === "Brian & Heather Gleser" || selected === "Lura Koos"){
+            artist_Site(selected);
             locateMarkers(map, "Eileen Muray", "Lisa Poston", "Brian & Heather Gleser", "Lura Koos");
         }
         if(selected === "Jason & Jeanne Dayne" || selected === "Lisa Haley" || selected === "Pam Wood" || selected === "Jim Rajner"){
+            artist_Site(selected);
             locateMarkers(map, "Jason & Jeanne Dayne", "Lisa Haley", "Pam Wood", "Jim Rajner");
         }
         // ------------ Here is the S area on the map ------------------
@@ -546,24 +569,421 @@ header {
 
         */
         if(selected === "Patricia Tharp" || selected === "Polly Toombs" || selected === "Marlene Olson" || selected === "Heather Richman" || selected === "Mary Rhodes" || selected === "Cesar Cobos"){
+            artist_Site(selected);
             locateMarkers(map, "Patricia Thrap", "Polly Toombs", "Marlene Olson", "Heather Richman", "Mary Rhodes", "Cesar Cobos")
         }
         if(selected === "Ian Ely" || selected === "Paul Nzalamba"){
+            artist_Site(selected);
             locateMarkers(map, "Ian Ely", "Paul Nzalamba", "", "");
         }
         if(selected === "June Lantz" || selected === "Dana Spanierman" || selected === "Tracy Harris"){
+            artist_Site(selected);
             locateMarkers(map, "June Lantz", "Dana Spanierman", "Tracy Harris", "");
         }
         if(selected === "Kim & Mark Patillo" || selected === "Leah Way" || selected === "Peggy Dillon"){
+            artist_Site(selected);
             locateMarkers(map, "Kim & Mark Patillo", "Leah Way", "Peggy Dillon", "");
         }
         if(selected === "Yeshe Jackson" || selected === "Christi Hilton"){
+            artist_Site(selected);
             locateMarkers(map, "Yeshe Jackson", "Christi Hilton", "", "");
         }
         if(selected === "Brooke Glineur" || selected === "Hector Perez Velazquez" || selected === "Krista Leontieff"){
+            artist_Site(selected);
             locateMarkers(map, "Brooke Glineur", "Hector Perez Velazquez", "Krista Leontieff", "");
         }
     }
+
+function artist_Site(selected){
+        // logic for routing to artist's website"
+        // var artistList = document.getElementById("artist");
+        // var selected = artistList.options[artistList.selectedIndex].text;
+        // document.getElementById("Asite").style.visibility="visible";    
+
+        // This logic works prefectly fine:
+        // if(selected === "Mary Kay Wilkinson") {
+        //     document.getElementById("Asite").style.visibility="visible";
+        //     document.getElementById('Asite').onclick = function(){
+        //         window.location.assign("http://svartfest.com/artists/mary-kay-wilkinson/");
+        //     }
+        // }
+
+        // alert("Before going to Mary Jessen");
+        // if(selected === "Mary Jessen"){
+        //     alert("Hi, I am here now.");
+        //      document.getElementById("Asite").style.visibility="visible";
+        //     document.getElementById('Asite').onclick = function(){
+        //         alert("I am in the heart");
+        //         window.location.assign("http://svartfest.com/artists/mary-kay-wilkinson/");
+        //     }
+        // }
+
+        switch(selected){
+            case "Kim Williams":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.pureintent.org/"); break;
+            case "Jeanne Rousseau":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://jdecdesigns.com/"); break;  
+            case "Nancy Haver":
+                 alert("Selected artist doesn't have a website."); break;
+            case "Cristy Aloysi":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.viscositystudio.com/"); break;   
+            case "Carol Riddle":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://artbycarol.com/"); break;
+            case "Alissa Bennett":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.alissab.com/"); break;
+            case "Brooke Glineur":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.aquamarinejewelrystudio.com/index.html"); break;
+            case "Angel Nodal":
+                alert("Selected artist doesn't have a website."); break;
+            case "Mary Jessen":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                    window.location.assign("http://svartfest.com/artists/mary-jessen/"); 
+                }
+                break;
+            case "Laurie Tholen":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("https://www.etsy.com/shop/rizingemstar"); break;
+            case "Polly Toombs":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                    window.location.assign("http://svartfest.com/artists/polly-toombs/");
+                }
+                break; 
+            case "Shandra Hunt":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.berserkglassworks.com/"); break;
+            case "Brian Iles":
+                alert("Selected artist doesn't have a website."); break;
+            case "Mary Kay Wilkinson":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                    window.location.assign("http://svartfest.com/artists/mary-kay-wilkinson/");
+                }
+                break;
+            case "Terry McCormac":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.terrymccormac.com/-/terrymccormac/"); break;
+            case "Jason & Jeanne Dayne":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                    window.location.assign("http://svartfest.com/artists/jason-jeanne-dayne/");
+                }
+                break;
+            case "Jeff Lesniak":
+                alert("Selected artist doesn't have a website."); break;
+            case "Isabel Wilson":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.sandcastlemagic.com/"); break;
+            case "Linda Curtis":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                    window.location.assign("http://svartfest.com/artists/linda-curtis/");
+                }
+                break;
+            case "Lori Lester":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                    window.location.assign("http://svartfest.com/artists/lori-lester/"); 
+                }
+                break;
+            case "Kim & Mark Patillo":
+                alert("Selected artist doesn't have a website."); break;
+            case "Christi Hilton":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                    window.location.assign("http://svartfest.com/artists/christi-hilton/"); 
+                }
+                break;
+            case "Megan DeHerrera":
+                alert("Selected artist doesn't have a website."); break;
+            case "Cheryl Costella":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://ccostellastudio.daportfolio.com/"); break;
+            case "Peggy Dillon":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.twinskitchensantacruz.com/"); break;
+            case "Diana Washington":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("https://www.instagram.com/decadentsoaps/"); break;
+            case "Leanna Simmons":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("https://www.etsy.com/shop/DamselflyDesignsCo"); break;
+            case "Neil Simmons":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.neilsimmonsphotography.com/"); break;
+            case "Silvana Piga":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.primalhenna.com/"); break;
+            case "Ellen McErlane":
+                alert("Selected artist doesn't have a website."); break;
+            case "Dana Spanierman":
+                alert("Selected artist doesn't have a website."); break;
+            case "Heather Richman":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://glass.crafty-fox.com/"); break;
+            case "Tony Pagliaro":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.santacruzphotography.com/#/page/home/"); break;
+            case "Rhea Dennis":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                   window.location.assign("http://svartfest.com/artists/rhea-dennis/");
+                }
+                break;
+            case "Tri Tran":
+                alert("Selected artist doesn't have a website."); break;
+            case "Marilyn Bates-Nolan":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                   window.location.assign("http://svartfest.com/artists/scarlet-mare-studio/"); 
+                }
+                break;
+            case "Hector Perez Velazquez":
+                alert("Selected artist doesn't have a website."); break;
+            case "Lura Koos":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.agapelavieorganics.com/"); break;
+            case "John Shipp":
+                alert("Selected artist doesn't have a website."); break;
+            case "Anna Pavlova":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://hairforkonline.com/"); break;
+            case "Alisan Andrews":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.alisanandrews.com/"); break;
+            case "Danny Quijano":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                   window.location.assign("http://svartfest.com/artists/danny-quijano/"); 
+                } 
+                break;
+            case "Yeshe Jackson":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("https://www.instagram.com/yeshejackson/"); break;
+            case "Krista Leontieff":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                   window.location.assign("http://svartfest.com/artists/krista-leontieff/");
+                } 
+                break;
+            case "Cynthia Starkey":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                    window.location.assign("http://svartfest.com/artists/cynthia-starkey/"); 
+                }   
+                break;
+            case "Gila Sagy":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.gilasagy.com/"); break;
+            case "Stephen Toll":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                    window.location.assign("http://svartfest.com/artists/stephen-toll-photography/"); 
+                }  
+                break;
+            case "Erik Waage":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.santacruzmtns.com/"); break;
+            case "Leanne Hamilton":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://leannehamilton.com/"); break;
+            case "Helen Youmans":
+                alert("Selected artist doesn't have a website."); break;
+            case "April Zilber":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                    window.location.assign("http://svartfest.com/artists/april-zilber/"); 
+                }  
+                break;
+            case "Kelsey Fransen":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                    window.location.assign("http://svartfest.com/artists/kelsey-fransen/"); 
+                } 
+                break;
+            case "Linda Schauble":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.lindaschauble.com/"); break;
+            case "John F. Hunter":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.johnfhunterphotography.com/"); break;
+            case "Judy Bingman":
+                alert("Selected artist doesn't have a website."); break;
+            case "Michael Simon Dickey":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.michaelsimondickey.com/"); break;
+            case "Vincent Verret":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                   window.location.assign("http://svartfest.com/artists/vincent-verret/");
+                }
+                break;
+            case "Wendy Collins":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                   window.location.assign("http://svartfest.com/artists/wendy-collins/"); 
+                }
+                break;
+            case "Nancy Wade":
+                alert("Selected artist doesn't have a website."); break;
+            case "Iris Wise":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://iriswiseart.com/"); break;
+            case "Frank Vigneri":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.vignericandleopera.com/"); break;
+            case "Jennifer Lomb":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.lomb-arts.com/"); break;
+            case "Lisa Grant":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                   window.location.assign("http://svartfest.com/artists/lisa-grant/"); 
+                }
+                break;
+            case "Brian & Heather Gleser":
+                alert("Selected artist doesn't have a website."); break;
+            case "Jay Topping":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://jaytoppingart.com/"); break;
+            case "Karen Asherah":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.karenasherah.com/"); break;
+            case "Jeffrey Nelson":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.hudsonriverinlay.com/"); break;
+            case "Lisa Poston":
+                alert("Selected artist doesn't have a website."); break;
+            case "Kristi Flynn":
+                alert("Selected artist doesn't have a website."); break;
+            case "James Lassak":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.elusiveenterprize.com/"); break;
+            case "Pam Wood":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.pamwoodphoto.com/"); break;
+            case "June Lantz":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                   window.location.assign("http://svartfest.com/artists/june-lantz/"); 
+                }
+                break;
+            case "Lisa Haley":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.bodyandsoulapothecary.com/"); break;
+            case "Eileen Murray":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://eileenmurrayarts.blogspot.com/?from=@"); break;
+            case "Paul Nzalamba":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.nzalamba-artworks.com/"); break;
+            case "Jim Rajner":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                   window.location.assign("http://svartfest.com/artists/jim-rajner/"); 
+                }
+                break;
+            case "Ian Ely":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("https://www.ianely.com/"); break;
+            case "Patricia Tharp":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                    window.location.assign("http://svartfest.com/artists/patricia-tharp/"); 
+                }
+               break;
+            case "Mary Rhodes":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                    window.location.assign("http://svartfest.com/artists/mary-rhodes/");
+                }
+                break;
+            case "Linjong Kunsuwanlee":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("https://www.facebook.com/people/Pigsflyyes-Mobiles/100009017829267"); break;
+            case "Joe Ludlow":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.heyheygourmet.com/"); break;
+            case "Suzanne McLean":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("https://www.facebook.com/cajamqueen"); break;
+            case "Tracy Harris":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("https://www.etsy.com/shop/Heartofglassbytracy"); break;
+            case "Heather Deming":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("https://squareup.com/store/beading-4-therapy"); break;
+            case "Stephanie Delaney":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                   window.location.assign("http://svartfest.com/artists/stephanie-delaney/"); 
+                }
+                break;
+            case "John Andrich":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://andrichart.com/"); break;
+            case "Lisa Tarris":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.seascapesoap.com/"); break;
+            case "Danielle Velazquez":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("https://www.facebook.com/flipyourlidd"); break;
+            case "Napoleon Paz":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                   window.location.assign(" http://svartfest.com/artists/napoleon-paz/"); 
+                }
+                break;
+            case "Leah Way":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                   window.location.assign("http://svartfest.com/artists/leah-way/"); 
+                }
+                break;
+            case "Linda Mills":
+                alert("Selected artist doesn't have a website."); break;
+            case "Anesa Carosielli":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                   window.location.assign("http://svartfest.com/artists/anesa-carosielli/"); 
+                }
+                break;
+            case "Stephanie Aguilar":
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                   window.location.assign("http://svartfest.com/artists/stephanie-aguilar/"); 
+                }
+                break;
+            case "Tammy Galvan":
+                alert("Selected artist doesn't have a website."); break;
+            case "Shlomo Shuval":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.sierraslate.com/"); break;
+            case "Caroline Veira":
+                alert("Selected artist doesn't have a website."); break;
+            case "Jiten Sadhwani":
+                alert("Selected artist doesn't have a website."); break;
+                // window.location.assign("http://www.ashprey.com/shop/"); break;
+            case "Marlene Olson": 
+                document.getElementById("Asite").style.visibility="visible";
+                document.getElementById('Asite').onclick = function(){
+                    window.location.assign("http://svartfest.com/artists/marlene-olson/");
+                }
+                break;
+            case "":
+                alert("Please select an artist"); break;
+            default:
+                alert("Testing");
+        }
+
+}
     /*
      __________________________________________________________________
     |This function gets three arguments, map, artist1, and artist2.    |
@@ -784,7 +1204,7 @@ header {
       }
 
     </script> 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEYcallback=initMap">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=initMap">
     </script>
 </body>
 </html>
