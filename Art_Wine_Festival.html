@@ -181,10 +181,11 @@
     background-size: 100% 100%;
 }
 header {
-    padding: 1em;
+    padding: .1em;
     color: white;
     background-color: green;
     clear: left;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -216,7 +217,7 @@ header {
 <button class="button" onclick="initMap()" style="float: left;">3D Map</button>
 </div></ul>
 <ul class="right hide-on-med-and-down">   
-<br></br>
+<br><h2> Please select a category and artist from the menu below: </h2></br>
   <nav>
     <div class="nav-wrapper">
     <div class="styled-select">
@@ -316,7 +317,7 @@ header {
     <!--<br>
     <button2 class="button2" onclick="initMap()" style="float: center;">3D Map</button2>
     </br>-->
-    <script>
+    <script>s
     var historicalOverlay;
 
     // This is to hold all the artists with their category
@@ -380,7 +381,8 @@ header {
         //     select.onchange = function(){
         //     select.className = this.options[this.selectedIndex].className;
         // }
-        // document.getElementById("Asite").style.visibility="visible";     
+        // document.getElementById("Asite").style.visibility="visible";   
+        document.getElementById("Asite").style.visibility="hidden";  // This is to make sure button is hidden if the user doesn't have a site
 
         var categoryList = document.getElementById("category");
         var artistList = document.getElementById("artist");
@@ -439,7 +441,7 @@ header {
           west: -122.033022
         };
         
-
+''
         historicalOverlay = new google.maps.GroundOverlay(
             'https://s4.postimg.io/tha2ez8el/map_event_2.jpg',
             imageBounds);
@@ -509,6 +511,10 @@ header {
         if(selected === "Angel Nodal" || selected === "Linda Curtis"){
             artist_Site(selected);
             locateMarkers(map, "Angel Nodal", "Linda Curtis", "", "");
+        }
+        if(selected === "Jay Topping"){
+            artist_Site(selected);
+            locateMarkers(map, "Jay Topping", "", "", "");
         }
         // ------------ Here is the E area on the map ------------------
 
@@ -593,395 +599,389 @@ header {
             locateMarkers(map, "Brooke Glineur", "Hector Perez Velazquez", "Krista Leontieff", "");
         }
     }
+/*
+ _____________________________________________________________
+| Function artist_Site() takes one parameter and and does not |
+| return anything. The purpose of is to evaluate the user     |
+| selection for the artists. Since every 4 artists share a    |
+| same GPS location (for simplicity) each artist needs to be  | 
+| looked at individually so user is directed to the right     |
+| artist's website. There is a huge switch statement written  |
+| in order to enable the button for taking users to the       |
+| right selected artist's website. If the selected artist has |
+| a website then the button gets visible and functionable,    |
+| otherwise it remains hidden.                                |
+|_____________________________________________________________|
 
+*/ 
 function artist_Site(selected){
-        // logic for routing to artist's website"
-        // var artistList = document.getElementById("artist");
-        // var selected = artistList.options[artistList.selectedIndex].text;
-        // document.getElementById("Asite").style.visibility="visible";    
-
-        // This logic works prefectly fine:
-        // if(selected === "Mary Kay Wilkinson") {
-        //     document.getElementById("Asite").style.visibility="visible";
-        //     document.getElementById('Asite').onclick = function(){
-        //         window.location.assign("http://svartfest.com/artists/mary-kay-wilkinson/");
-        //     }
-        // }
-
-        // alert("Before going to Mary Jessen");
-        // if(selected === "Mary Jessen"){
-        //     alert("Hi, I am here now.");
-        //      document.getElementById("Asite").style.visibility="visible";
-        //     document.getElementById('Asite').onclick = function(){
-        //         alert("I am in the heart");
-        //         window.location.assign("http://svartfest.com/artists/mary-kay-wilkinson/");
-        //     }
-        // }
-
-        switch(selected){
-            case "Kim Williams":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.pureintent.org/"); break;
-            case "Jeanne Rousseau":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://jdecdesigns.com/"); break;  
-            case "Nancy Haver":
-                 alert("Selected artist doesn't have a website."); break;
-            case "Cristy Aloysi":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.viscositystudio.com/"); break;   
-            case "Carol Riddle":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://artbycarol.com/"); break;
-            case "Alissa Bennett":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.alissab.com/"); break;
-            case "Brooke Glineur":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.aquamarinejewelrystudio.com/index.html"); break;
-            case "Angel Nodal":
-                alert("Selected artist doesn't have a website."); break;
-            case "Mary Jessen":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                    window.location.assign("http://svartfest.com/artists/mary-jessen/"); 
-                }
-                break;
-            case "Laurie Tholen":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("https://www.etsy.com/shop/rizingemstar"); break;
-            case "Polly Toombs":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                    window.location.assign("http://svartfest.com/artists/polly-toombs/");
-                }
-                break; 
-            case "Shandra Hunt":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.berserkglassworks.com/"); break;
-            case "Brian Iles":
-                alert("Selected artist doesn't have a website."); break;
-            case "Mary Kay Wilkinson":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                    window.location.assign("http://svartfest.com/artists/mary-kay-wilkinson/");
-                }
-                break;
-            case "Terry McCormac":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.terrymccormac.com/-/terrymccormac/"); break;
-            case "Jason & Jeanne Dayne":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                    window.location.assign("http://svartfest.com/artists/jason-jeanne-dayne/");
-                }
-                break;
-            case "Jeff Lesniak":
-                alert("Selected artist doesn't have a website."); break;
-            case "Isabel Wilson":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.sandcastlemagic.com/"); break;
-            case "Linda Curtis":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                    window.location.assign("http://svartfest.com/artists/linda-curtis/");
-                }
-                break;
-            case "Lori Lester":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                    window.location.assign("http://svartfest.com/artists/lori-lester/"); 
-                }
-                break;
-            case "Kim & Mark Patillo":
-                alert("Selected artist doesn't have a website."); break;
-            case "Christi Hilton":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                    window.location.assign("http://svartfest.com/artists/christi-hilton/"); 
-                }
-                break;
-            case "Megan DeHerrera":
-                alert("Selected artist doesn't have a website."); break;
-            case "Cheryl Costella":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://ccostellastudio.daportfolio.com/"); break;
-            case "Peggy Dillon":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.twinskitchensantacruz.com/"); break;
-            case "Diana Washington":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("https://www.instagram.com/decadentsoaps/"); break;
-            case "Leanna Simmons":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("https://www.etsy.com/shop/DamselflyDesignsCo"); break;
-            case "Neil Simmons":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.neilsimmonsphotography.com/"); break;
-            case "Silvana Piga":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.primalhenna.com/"); break;
-            case "Ellen McErlane":
-                alert("Selected artist doesn't have a website."); break;
-            case "Dana Spanierman":
-                alert("Selected artist doesn't have a website."); break;
-            case "Heather Richman":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://glass.crafty-fox.com/"); break;
-            case "Tony Pagliaro":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.santacruzphotography.com/#/page/home/"); break;
-            case "Rhea Dennis":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                   window.location.assign("http://svartfest.com/artists/rhea-dennis/");
-                }
-                break;
-            case "Tri Tran":
-                alert("Selected artist doesn't have a website."); break;
-            case "Marilyn Bates-Nolan":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                   window.location.assign("http://svartfest.com/artists/scarlet-mare-studio/"); 
-                }
-                break;
-            case "Hector Perez Velazquez":
-                alert("Selected artist doesn't have a website."); break;
-            case "Lura Koos":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.agapelavieorganics.com/"); break;
-            case "John Shipp":
-                alert("Selected artist doesn't have a website."); break;
-            case "Anna Pavlova":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://hairforkonline.com/"); break;
-            case "Alisan Andrews":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.alisanandrews.com/"); break;
-            case "Danny Quijano":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                   window.location.assign("http://svartfest.com/artists/danny-quijano/"); 
-                } 
-                break;
-            case "Yeshe Jackson":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("https://www.instagram.com/yeshejackson/"); break;
-            case "Krista Leontieff":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                   window.location.assign("http://svartfest.com/artists/krista-leontieff/");
-                } 
-                break;
-            case "Cynthia Starkey":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                    window.location.assign("http://svartfest.com/artists/cynthia-starkey/"); 
-                }   
-                break;
-            case "Gila Sagy":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.gilasagy.com/"); break;
-            case "Stephen Toll":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                    window.location.assign("http://svartfest.com/artists/stephen-toll-photography/"); 
-                }  
-                break;
-            case "Erik Waage":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.santacruzmtns.com/"); break;
-            case "Leanne Hamilton":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://leannehamilton.com/"); break;
-            case "Helen Youmans":
-                alert("Selected artist doesn't have a website."); break;
-            case "April Zilber":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                    window.location.assign("http://svartfest.com/artists/april-zilber/"); 
-                }  
-                break;
-            case "Kelsey Fransen":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                    window.location.assign("http://svartfest.com/artists/kelsey-fransen/"); 
-                } 
-                break;
-            case "Linda Schauble":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.lindaschauble.com/"); break;
-            case "John F. Hunter":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.johnfhunterphotography.com/"); break;
-            case "Judy Bingman":
-                alert("Selected artist doesn't have a website."); break;
-            case "Michael Simon Dickey":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.michaelsimondickey.com/"); break;
-            case "Vincent Verret":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                   window.location.assign("http://svartfest.com/artists/vincent-verret/");
-                }
-                break;
-            case "Wendy Collins":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                   window.location.assign("http://svartfest.com/artists/wendy-collins/"); 
-                }
-                break;
-            case "Nancy Wade":
-                alert("Selected artist doesn't have a website."); break;
-            case "Iris Wise":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://iriswiseart.com/"); break;
-            case "Frank Vigneri":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.vignericandleopera.com/"); break;
-            case "Jennifer Lomb":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.lomb-arts.com/"); break;
-            case "Lisa Grant":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                   window.location.assign("http://svartfest.com/artists/lisa-grant/"); 
-                }
-                break;
-            case "Brian & Heather Gleser":
-                alert("Selected artist doesn't have a website."); break;
-            case "Jay Topping":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://jaytoppingart.com/"); break;
-            case "Karen Asherah":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.karenasherah.com/"); break;
-            case "Jeffrey Nelson":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.hudsonriverinlay.com/"); break;
-            case "Lisa Poston":
-                alert("Selected artist doesn't have a website."); break;
-            case "Kristi Flynn":
-                alert("Selected artist doesn't have a website."); break;
-            case "James Lassak":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.elusiveenterprize.com/"); break;
-            case "Pam Wood":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.pamwoodphoto.com/"); break;
-            case "June Lantz":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                   window.location.assign("http://svartfest.com/artists/june-lantz/"); 
-                }
-                break;
-            case "Lisa Haley":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.bodyandsoulapothecary.com/"); break;
-            case "Eileen Murray":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://eileenmurrayarts.blogspot.com/?from=@"); break;
-            case "Paul Nzalamba":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.nzalamba-artworks.com/"); break;
-            case "Jim Rajner":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                   window.location.assign("http://svartfest.com/artists/jim-rajner/"); 
-                }
-                break;
-            case "Ian Ely":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("https://www.ianely.com/"); break;
-            case "Patricia Tharp":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                    window.location.assign("http://svartfest.com/artists/patricia-tharp/"); 
-                }
-               break;
-            case "Mary Rhodes":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                    window.location.assign("http://svartfest.com/artists/mary-rhodes/");
-                }
-                break;
-            case "Linjong Kunsuwanlee":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("https://www.facebook.com/people/Pigsflyyes-Mobiles/100009017829267"); break;
-            case "Joe Ludlow":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.heyheygourmet.com/"); break;
-            case "Suzanne McLean":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("https://www.facebook.com/cajamqueen"); break;
-            case "Tracy Harris":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("https://www.etsy.com/shop/Heartofglassbytracy"); break;
-            case "Heather Deming":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("https://squareup.com/store/beading-4-therapy"); break;
-            case "Stephanie Delaney":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                   window.location.assign("http://svartfest.com/artists/stephanie-delaney/"); 
-                }
-                break;
-            case "John Andrich":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://andrichart.com/"); break;
-            case "Lisa Tarris":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.seascapesoap.com/"); break;
-            case "Danielle Velazquez":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("https://www.facebook.com/flipyourlidd"); break;
-            case "Napoleon Paz":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                   window.location.assign(" http://svartfest.com/artists/napoleon-paz/"); 
-                }
-                break;
-            case "Leah Way":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                   window.location.assign("http://svartfest.com/artists/leah-way/"); 
-                }
-                break;
-            case "Linda Mills":
-                alert("Selected artist doesn't have a website."); break;
-            case "Anesa Carosielli":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                   window.location.assign("http://svartfest.com/artists/anesa-carosielli/"); 
-                }
-                break;
-            case "Stephanie Aguilar":
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                   window.location.assign("http://svartfest.com/artists/stephanie-aguilar/"); 
-                }
-                break;
-            case "Tammy Galvan":
-                alert("Selected artist doesn't have a website."); break;
-            case "Shlomo Shuval":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.sierraslate.com/"); break;
-            case "Caroline Veira":
-                alert("Selected artist doesn't have a website."); break;
-            case "Jiten Sadhwani":
-                alert("Selected artist doesn't have a website."); break;
-                // window.location.assign("http://www.ashprey.com/shop/"); break;
-            case "Marlene Olson": 
-                document.getElementById("Asite").style.visibility="visible";
-                document.getElementById('Asite').onclick = function(){
-                    window.location.assign("http://svartfest.com/artists/marlene-olson/");
-                }
-                break;
-            case "":
-                alert("Please select an artist"); break;
-            default:
-                alert("Testing");
-        }
+    document.getElementById("Asite").style.visibility="hidden";
+    switch(selected){
+        case "Will Sandford":
+            console.log("Selected artist doesn't have a website."); break;
+        case "Kim Williams":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.pureintent.org/"); break;
+        case "Jeanne Rousseau":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://jdecdesigns.com/"); break;  
+        case "Nancy Haver":
+             console.log("Selected artist doesn't have a website."); break;
+        case "Cristy Aloysi":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.viscositystudio.com/"); break;   
+        case "Carol Riddle":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://artbycarol.com/"); break;
+        case "Alissa Bennett":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.alissab.com/"); break;
+        case "Brooke Glineur":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.aquamarinejewelrystudio.com/index.html"); break;
+        case "Angel Nodal":
+            console.log("Selected artist doesn't have a website."); break;
+        case "Mary Jessen":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+                window.location.assign("http://svartfest.com/artists/mary-jessen/"); 
+            }
+            break;
+        case "Laurie Tholen":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("https://www.etsy.com/shop/rizingemstar"); break;
+        case "Polly Toombs":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+                window.location.assign("http://svartfest.com/artists/polly-toombs/");
+            }
+            break; 
+        case "Shandra Hunt":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.berserkglassworks.com/"); break;
+        case "Brian Iles":
+            console.log("Selected artist doesn't have a website."); break;
+        case "Mary Kay Wilkinson":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+                window.location.assign("http://svartfest.com/artists/mary-kay-wilkinson/");
+            }
+            break;
+        case "Terry McCormac":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.terrymccormac.com/-/terrymccormac/"); break;
+        case "Jason & Jeanne Dayne":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+                window.location.assign("http://svartfest.com/artists/jason-jeanne-dayne/");
+            }
+            break;
+        case "Jeff Lesniak":
+            console.log("Selected artist doesn't have a website."); break;
+        case "Isabel Wilson":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.sandcastlemagic.com/"); break;
+        case "Linda Curtis":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+                window.location.assign("http://svartfest.com/artists/linda-curtis/");
+            }
+            break;
+        case "Lori Lester":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+                window.location.assign("http://svartfest.com/artists/lori-lester/"); 
+            }
+            break;
+        case "Kim & Mark Patillo":
+            console.log("Selected artist doesn't have a website."); break;
+        case "Christi Hilton":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+                window.location.assign("http://svartfest.com/artists/christi-hilton/"); 
+            }
+            break;
+        case "Megan DeHerrera":
+            console.log("Selected artist doesn't have a website."); break;
+        case "Cheryl Costella":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://ccostellastudio.daportfolio.com/"); break;
+        case "Peggy Dillon":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.twinskitchensantacruz.com/"); break;
+        case "Diana Washington":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("https://www.instagram.com/decadentsoaps/"); break;
+        case "Leanna Simmons":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("https://www.etsy.com/shop/DamselflyDesignsCo"); break;
+        case "Neil Simmons":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.neilsimmonsphotography.com/"); break;
+        case "Silvana Piga":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.primalhenna.com/"); break;
+        case "Ellen McErlane":
+            console.log("Selected artist doesn't have a website."); break;
+        case "Dana Spanierman":
+            console.log("Selected artist doesn't have a website."); break;
+        case "Heather Richman":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://glass.crafty-fox.com/"); break;
+        case "Tony Pagliaro":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.santacruzphotography.com/#/page/home/"); break;
+        case "Rhea Dennis":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+               window.location.assign("http://svartfest.com/artists/rhea-dennis/");
+            }
+            break;
+        case "Tri Tran":
+            console.log("Selected artist doesn't have a website."); break;
+        case "Marilyn Bates-Nolan":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+               window.location.assign("http://svartfest.com/artists/scarlet-mare-studio/"); 
+            }
+            break;
+        case "Hector Perez Velazquez":
+            console.log("Selected artist doesn't have a website."); break;
+        case "Lura Koos":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.agapelavieorganics.com/"); break;
+        case "John Shipp":
+            console.log("Selected artist doesn't have a website."); break;
+        case "Anna Pavlova":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://hairforkonline.com/"); break;
+        case "Alisan Andrews":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.alisanandrews.com/"); break;
+        case "Danny Quijano":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+               window.location.assign("http://svartfest.com/artists/danny-quijano/"); 
+            } 
+            break;
+        case "Yeshe Jackson":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("https://www.instagram.com/yeshejackson/"); break;
+        case "Krista Leontieff":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+               window.location.assign("http://svartfest.com/artists/krista-leontieff/");
+            } 
+            break;
+        case "Cynthia Starkey":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+                window.location.assign("http://svartfest.com/artists/cynthia-starkey/"); 
+            }   
+            break;
+        case "Gila Sagy":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.gilasagy.com/"); break;
+        case "Stephen Toll":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+                window.location.assign("http://svartfest.com/artists/stephen-toll-photography/"); 
+            }  
+            break;
+        case "Erik Waage":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.santacruzmtns.com/"); break;
+        case "Leanne Hamilton":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://leannehamilton.com/"); break;
+        case "Helen Youmans":
+            console.log("Selected artist doesn't have a website."); break;
+        case "April Zilber":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+                window.location.assign("http://svartfest.com/artists/april-zilber/"); 
+            }  
+            break;
+        case "Kelsey Fransen":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+                window.location.assign("http://svartfest.com/artists/kelsey-fransen/"); 
+            } 
+            break;
+        case "Linda Schauble":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.lindaschauble.com/"); break;
+        case "John F. Hunter":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.johnfhunterphotography.com/"); break;
+        case "Judy Bingman":
+            console.log("Selected artist doesn't have a website."); break;
+        case "Michael Simon Dickey":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.michaelsimondickey.com/"); break;
+        case "Vincent Verret":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+               window.location.assign("http://svartfest.com/artists/vincent-verret/");
+            }
+            break;
+        case "Wendy Collins":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+               window.location.assign("http://svartfest.com/artists/wendy-collins/"); 
+            }
+            break;
+        case "Nancy Wade":
+            console.log("Selected artist doesn't have a website."); break;
+        case "Iris Wise":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://iriswiseart.com/"); break;
+        case "Frank Vigneri":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.vignericandleopera.com/"); break;
+        case "Jennifer Lomb":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.lomb-arts.com/"); break;
+        case "Lisa Grant":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+               window.location.assign("http://svartfest.com/artists/lisa-grant/"); 
+            }
+            break;
+        case "Brian & Heather Gleser":
+            console.log("Selected artist doesn't have a website."); break;
+        case "Jay Topping":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://jaytoppingart.com/"); break;
+        case "Karen Asherah":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.karenasherah.com/"); break;
+        case "Jeffrey Nelson":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.hudsonriverinlay.com/"); break;
+        case "Lisa Poston":
+            console.log("Selected artist doesn't have a website."); break;
+        case "Kristi Flynn":
+            console.log("Selected artist doesn't have a website."); break;
+        case "James Lassak":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.elusiveenterprize.com/"); break;
+        case "Pam Wood":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.pamwoodphoto.com/"); break;
+        case "June Lantz":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+               window.location.assign("http://svartfest.com/artists/june-lantz/"); 
+            }
+            break;
+        case "Lisa Haley":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.bodyandsoulapothecary.com/"); break;
+        case "Eileen Murray":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://eileenmurrayarts.blogspot.com/?from=@"); break;
+        case "Paul Nzalamba":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.nzalamba-artworks.com/"); break;
+        case "Jim Rajner":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+               window.location.assign("http://svartfest.com/artists/jim-rajner/"); 
+            }
+            break;
+        case "Ian Ely":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("https://www.ianely.com/"); break;
+        case "Patricia Tharp":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+                window.location.assign("http://svartfest.com/artists/patricia-tharp/"); 
+            }
+           break;
+        case "Mary Rhodes":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+                window.location.assign("http://svartfest.com/artists/mary-rhodes/");
+            }
+            break;
+        case "Linjong Kunsuwanlee":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("https://www.facebook.com/people/Pigsflyyes-Mobiles/100009017829267"); break;
+        case "Joe Ludlow":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.heyheygourmet.com/"); break;
+        case "Suzanne McLean":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("https://www.facebook.com/cajamqueen"); break;
+        case "Tracy Harris":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("https://www.etsy.com/shop/Heartofglassbytracy"); break;
+        case "Heather Deming":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("https://squareup.com/store/beading-4-therapy"); break;
+        case "Stephanie Delaney":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+               window.location.assign("http://svartfest.com/artists/stephanie-delaney/"); 
+            }
+            break;
+        case "John Andrich":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://andrichart.com/"); break;
+        case "Lisa Tarris":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.seascapesoap.com/"); break;
+        case "Danielle Velasquez-Echeverria":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("https://www.facebook.com/flipyourlidd"); break;
+        case "Napoleon Paz":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+               window.location.assign(" http://svartfest.com/artists/napoleon-paz/"); 
+            }
+            break;
+        case "Leah Way":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+               window.location.assign("http://svartfest.com/artists/leah-way/"); 
+            }
+            break;
+        case "Linda Mills":
+            console.log("Selected artist doesn't have a website."); break;
+        case "Anesa Carosielli":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+               window.location.assign("http://svartfest.com/artists/anesa-carosielli/"); 
+            }
+            break;
+        case "Stephanie Aguilar":
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+               window.location.assign("http://svartfest.com/artists/stephanie-aguilar/"); 
+            }
+            break;
+        case "Tammy Galvan":
+            console.log("Selected artist doesn't have a website."); break;
+        case "Shlomo Shuval":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.sierraslate.com/"); break;
+        case "Caroline Veira":
+            console.log("Selected artist doesn't have a website."); break;
+        case "Jiten Sadhwani":
+            console.log("Selected artist doesn't have a website."); break;
+            // window.location.assign("http://www.ashprey.com/shop/"); break;
+        case "Marlene Olson": 
+            document.getElementById("Asite").style.visibility="visible";
+            document.getElementById('Asite').onclick = function(){
+                window.location.assign("http://svartfest.com/artists/marlene-olson/");
+            }
+            break;
+        case "":
+            alert("Please select an artist"); break;
+        default:
+            console.log("Selected artist doesn't have a website.");
+    }
 
 }
     /*
@@ -1015,7 +1015,7 @@ function artist_Site(selected){
         ['Jim Rajner', 37.049710, -122.031270],
         ['Eileen Murray', 37.049830, -122.031390],
         ['Nancy Wade', 37.050195, -122.031730],
-        ['Jay Topping', 37., -122.], // Special?
+        ['Jay Topping', 37.050360, -122.032400], // Special?
         ['Frank Vigneri', 37.050190, -122.031990],
         ['Lisa Grant', 37.049880, -122.031260],
         ['Brian & Heather Gleser', 37.049830, -122.031390],
