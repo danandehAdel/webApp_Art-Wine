@@ -213,8 +213,8 @@ header {
      
 <div>
 <button class="button" onclick="redirectButton()" style="float: left;"> Home </button>
-<button class="button" onclick="foodMap()" style="float: left;"> Food's Map</button>
-<button class="button" onclick="initMap()" style="float: left;">3D Map</button>
+<button class="button" onclick="foodMap()" style="float: left;">Vendors map</button>
+<button class="button" onclick="initMap()" style="float: left;">Artists Map</button>
 </div></ul>
 <ul class="right hide-on-med-and-down">   
 <br><h2> Please select a category and artist from the menu below: </h2></br>
@@ -305,7 +305,7 @@ header {
             </option>
         </select> <select class="categ" id="artist" onchange="goButton()"> <!-- added onchange="goButton() to submit info without the Go button -->
             </select> 
-           <button class="button" id="Asite" onclick="artist_Site()" style="visibility:hidden" style="float: center;">Artist's site</button>
+           <button class="button" value="New Tab" id="Asite" onclick="artist_Site()" style="visibility:hidden" style="float: center;">Artist's site</button>
            <!-- remved the Go button -->
             
     </div>
@@ -317,7 +317,7 @@ header {
     <!--<br>
     <button2 class="button2" onclick="initMap()" style="float: center;">3D Map</button2>
     </br>-->
-    <script>s
+    <script>
     var historicalOverlay;
 
     // This is to hold all the artists with their category
@@ -1204,7 +1204,7 @@ function artist_Site(selected){
       }
 
     </script> 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=initMap">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY%20&callback=initMap">
     </script>
 </body>
 </html>
