@@ -203,6 +203,7 @@ header {
     cursor: pointer;
     font: normal normal bold 20px arial;
 }
+
 </style>
 </head>
 <header> <h1>Welcome to Art & Wine Festival </h1>
@@ -305,7 +306,7 @@ header {
             </option>
         </select> <select class="categ" id="artist" onchange="goButton()"> <!-- added onchange="goButton() to submit info without the Go button -->
             </select> 
-           <button class="button" value="New Tab" id="Asite" onclick="artist_Site()" style="visibility:hidden" style="float: center;">Artist's site</button>
+           <button class="button" id="Asite" onclick="artist_Site()" style="visibility:hidden" style="float: center;">Artist's site</button>
            <!-- remved the Go button -->
             
     </div>
@@ -314,6 +315,7 @@ header {
   </nav>
    
     <div id="map"></div>
+    <div id="developer" ><img src="https://s3.postimg.org/6gy08ysmr/imageedit_3_4795828085.png" style="float:right;width:80px;height:80px;"> <p align="right"><br><strong><font size="4">Powered by BWP</font></strong></br></p></div>
     <!--<br>
     <button2 class="button2" onclick="initMap()" style="float: center;">3D Map</button2>
     </br>-->
@@ -1204,7 +1206,7 @@ function artist_Site(selected){
       }
 
     </script> 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY%20&callback=initMap">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=initMap">
     </script>
 </body>
 </html>
