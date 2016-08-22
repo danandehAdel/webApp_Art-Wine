@@ -335,7 +335,7 @@ header {
     artAndCategory['furniture'] = ['-------Artists-------', 'Jeffrey Nelson'];
     artAndCategory['glass'] = ['-------Artists-------','Tracy Harris', 'Helen Youmans', 'Gila Sagy', 'April Zilber', 'Jeff Lesniak', 'Cristy Aloysi', 'Polly Toombs', 'Isabel Wilson', 'Heather Richman', 'Stephanie Delaney', 'Danielle Velasquez-Echeverria'];
     artAndCategory['hair accessories'] = ['-------Artists-------', 'Patricia Tharp'];
-    artAndCategory['jewelry'] = ['-------Artists-------', 'Heather Deming', 'June Lantz', 'Patricia Tharp', 'Lisa Haley', 'Lisa Grant', 'Gila Sagy', 'Cynthia Starkey', 'John Shipp', 'April Zilber', 'Jennifer Lomb', 'Christi Hilton', 'Leanna Simmons', 'Kim & Mark Patillo', 'Nancy Haver', 'Lori Lester', 'Jason & Jeanne Dayne', 'Ellen McErlane', 'Brooke Glineur', 'Isabel Wilson', 'Heather Richman', 'Shandra Hunt', 'Laurie Tholen', 'Alissa Bennett','Dana Spanierman', 'Marilyn Bates-Nolan', 'Stephanie Delaney', 'Stephanie Aguilar','Linda Mills', 'Anesa Carosielli', 'Tammy Galvan', 'Jiten Sadhwani'];
+    artAndCategory['jewelry'] = ['-------Artists-------', 'Heather Deming', 'June Lantz', 'Patricia Tharp', 'Lisa Haley', 'Lisa Grant', 'Gila Sagy', 'Cynthia Starkey', 'John Shipp', 'April Zilber', 'Jennifer Lomb', 'Christi Hilton', 'Leanna Simmons', 'Kim & Mark Patillo', 'Nancy Haver', 'Lori Lester', 'Jason & Jeanne Dayne', 'Ellen McErlane', 'Brooke Glineur', 'Isabel Wilson', 'Heather Richman', 'Shandra Hunt', 'Laurie Tholen', 'Alissa Bennett','Dana Spanierman', 'Marilyn Bates-Nolan', 'Stephanie Delaney', 'Stephanie Aguilar','Linda Mills', 'Anesa Carosielli', 'Tammy Galvan', 'Jiten Sadhwani', 'Amy Wolfe'];
     artAndCategory['knit and amp, Crochet'] = ['-------Artists-------', 'Mary Rhodes', 'Angel Nodal'];
     artAndCategory['leather'] = ['-------Artists-------', 'Kristi Flynn', 'Lisa Haley', 'Mary Kay Wilkinson', 'Shandra Hunt', 'Napoleon Paz'];
     artAndCategory['metalworking'] = ['-------Artists-------', 'Kristi Flynn', 'Lisa Grant', 'Hector Perez Velazquez', 'Laurie Tholen', 'Leah Way', 'Caroline Veira'];
@@ -343,10 +343,10 @@ header {
     artAndCategory['painting'] = ['-------Artists-------', 'Eileen Murray', 'Nancy Wade', 'Jay Topping', 'Iris Wise', 'Wendy Collins', 'Leanne Hamilton', 'Michael Simon Dickey', 'Alisan Andrews', 'Yeshe Jackson', 'Cheryl Costella', 'Jeanne Rousseau', 'Carol Riddle', 'Linda Curtis', 'Angel Nodal', 'Anesa Carosielli', 'John Andrich'];
     artAndCategory['paper crafts'] = ['-------Artists-------', 'Mary Kay Wilkinson'];
     artAndCategory['pet accessories'] = ['-------Artists-------', 'Mary Kay Wilkinson', 'Nancy Wade'];
-    artAndCategory['photography'] = ['-------Artists-------', 'Pam Wood', 'Ian Ely', 'Nancy Wade', 'John F. Hunter', 'Danny Quijano', 'Judy Bingman', 'Stephen Toll' ,'Karen Asherah', 'Tony Pagliaro', 'Terry McCormac', 'Neil Simmons', 'Marlene Olson'];
+    artAndCategory['photography'] = ['-------Artists-------', 'Pam Wood', 'Ian Ely', 'Nancy Wade', 'John F. Hunter', 'Danny Quijano', 'Judy Bingman', 'Stephen Toll' ,'Karen Asherah', 'Tony Pagliaro', 'Terry McCormac', 'Neil Simmons', 'Marlene Olson', 'Amy Wolfe'];
     artAndCategory['printmaking'] = ['-------Artists-------', 'Paul Nzalamba', 'Jay Topping', 'Wendy Collins'];
     artAndCategory['sauces and amp, jams'] = ['-------Artists-------', 'Suzanne McLean', 'Vincent Verret', 'Peggy Dillon'];
-    artAndCategory['sculpture'] = ['-------Artists-------', 'Laurie Tholen'];
+    artAndCategory['sculpture'] = ['-------Artists-------', 'Laurie Tholen', 'Amy Wolfe'];
     artAndCategory['stoneworking'] = ['-------Artists-------', 'Mary Kay Wilkinson', 'Shlomo Shuval'];
     artAndCategory['woodworking'] = ['-------Artists-------', 'Frank Vigneri', 'Jeffrey Nelson', 'Lisa Poston', 'Wendy Collins', 'Anna Pavlova', 'Krista Leontieff', 'Brian Iles', 'Danielle Velasquez-Echeverria', 'Linjong Kunsuwanlee'];
     artAndCategory['other categories'] = ['-------Artists-------', 'Kristi Flynn', 'Paul Nzalamba', 'Frank Vigneri', 'Vincent Verret', 'Kelsey Fransen', 'Alisan Andrews', 'Jeff Lesniak', 'Silvana Piga', 'Brian Iles', 'Joe Ludlow', 'Leah Way'];
@@ -557,9 +557,9 @@ header {
             artist_Site(selected);
             locateMarkers(map, "Wendy Collins", "Iris Wise", "Vincent Verret", "");
         }
-        if(selected === "Eileen Murray" || selected === "Lisa Poston" || selected === "Brian & Heather Gleser" || selected === "Lura Koos"){
+        if(selected === "Amy Wolfe" || selected === "Lisa Poston" || selected === "Brian & Heather Gleser" || selected === "Lura Koos"){
             artist_Site(selected);
-            locateMarkers(map, "Eileen Muray", "Lisa Poston", "Brian & Heather Gleser", "Lura Koos");
+            locateMarkers(map, "Amy Wolfe", "Lisa Poston", "Brian & Heather Gleser", "Lura Koos");
         }
         if(selected === "Jason & Jeanne Dayne" || selected === "Lisa Haley" || selected === "Pam Wood" || selected === "Jim Rajner"){
             artist_Site(selected);
@@ -1100,7 +1100,8 @@ function artist_Site(selected){
         ['Cesar Cobos' , 37.050010, -122.031810], 
         ['Shlomo Shuval', 37.050300, -122.032050], 
         ['Jiten Sadhwani', 37.050300, -122.032050], 
-        ['Caroline Veira', 37.050300, -122.032050]
+        ['Caroline Veira', 37.050300, -122.032050],
+        ['Amy Wolfe', 37.049830, -122.031390]
         ];
         
          var icon = {
@@ -1206,7 +1207,7 @@ function artist_Site(selected){
       }
 
     </script> 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=initMap">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY&callback=initMap">
     </script>
 </body>
 </html>
